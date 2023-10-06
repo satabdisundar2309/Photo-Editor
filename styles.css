@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+    padding: 1rem;
+}
+.container{
+    width: 90%;
+    max-width: 600px;
+    height: 100%;
+    padding: 5px;
+    box-shadow: 0 0 10px rgb(0,0,0,0.1);
+    border-radius: 5px;
+}
+.container img:nth-child(1){
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.view-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5px;
+}
+.view-img img{
+    width: 400px;
+    height: 360px;
+    object-fit: contain;
+}
+.choose-img{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.choose-img button{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    background: rgb(255, 119, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.choose-img button img{
+    width: 30px;
+}
+.slider{
+    width: 100%;
+    position: relative;
+    padding: 5px 10px;
+}
+.slider input[type='range']{
+    width: 100%;
+}
+.slider .filter-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+.icons-filter{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.icons-filter p{
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+.icons-filter .icons-room{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.icons-filter .icons-room button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+}
+.icons-room button img{
+    width: 20px;
+}
+.active{
+    
+    background-color: rgb(255, 255, 86) !important;
+    padding:  5px;
+    border-radius: 100%;
+}
+
+.icons-filter .icons-room1{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+.icons-filter .icons-room1 button{
+border: none;
+outline: none;
+background-color: transparent;
+height: 20;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-bottom: 0;
+}
+.icons-room1 button img{
+width: 20px;
+}
+.icons-room1 button:last-child{
+    transform: rotate(90deg);
+}
+.btn-contain{
+    width: 100%;
+    position: relative;
+    margin: 5px 0;
+}
+.btn-contain button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn-contain button:first-child{
+    border: 1px solid rgb(0,0,0,0.1);
+}
+.btn-contain button:first-child:hover{
+    border: 1px solid rgb(0,0,0,0.1);
+    color: white;
+    background-color: rgb(65, 65, 252);
+}
+.btn-contain button:last-child{
+    color: white;
+    background-color: rgb(14, 178, 42);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.disabled .view-img{
+    pointer-events: none;
+    opacity: 0.5;
+}
+.disabled .slider{
+    pointer-events: none;
+    opacity: 0.5;
+}
+.disabled .icons-filter{
+    pointer-events: none;
+    opacity: 0.5;
+}
+.disabled .btn-contain{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 100%;
+    }
+    body{
+        padding: 0;
+    }
+}
